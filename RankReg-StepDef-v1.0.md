@@ -13,12 +13,12 @@ public class steps {
 	WebDriver driver;
 	
 	@Given("^Open chrome and start application$")
-	public void chrome() throws Throwable {
+	public void Chrome() throws Throwable {
 		
 		System.setProperty("webdriver.chrome.driver","chromedriver");
-		driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://rank-apollo.ui.uat.brilliantbasics.com/themes/dark/markup/templates/pages/join-now.shtml");
+		driver.get("http://rank-apollo.ui.uat.brilliantbasics.com/themes/dark/markup/templates/global/logged-out.shtml");
 		
 		}
 	
@@ -57,9 +57,9 @@ public class steps {
 	}
 
 	@When("^User selects radio button \"([^\"]*)\"$")
-	public void user_selects_radio_button(String arg1) throws Throwable {
+	public void user_selects_radio_button(String Yes) throws Throwable {
 	   
-		driver.findElement(By.id("component_join-now")).click();
+		driver.findElement(By.xpath("//*[@id='component_join-now']")).click();
 	    
 	}
 
@@ -80,9 +80,9 @@ public class steps {
 	@When("^User clicks cta \"([^\"]*)\"$")
 	public void nextcta(String next) throws Throwable {
 	   
-		driver.findElement(By.id("component_join-now")).click();
+		driver.findElement(By.xpath("//*[@id='component_join-now']")).click();
 		
-	    
+		
 	}
 
 
