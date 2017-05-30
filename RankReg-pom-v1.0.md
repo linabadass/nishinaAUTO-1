@@ -15,6 +15,12 @@
 	</properties>
 
 	<dependencies>
+	
+	 <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.4.0</version>
+    </dependency> 
 		
 		<dependency>
 			<groupId>junit</groupId>
@@ -54,7 +60,7 @@
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.5.1</version>
+			<version>3.6.1</version>
 			<configuration>
 				<source>1.8</source>
 				<target>1.8</target>
@@ -66,7 +72,7 @@
 			<version>2.19.1</version>
 			<configuration>
 				<includes>
-					<exclude>**/*TestRunner.java</exclude>
+					<exclude>**/*RunnerTest.java</exclude>
 				</includes>
 			</configuration>
 		</plugin>
